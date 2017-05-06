@@ -1,0 +1,155 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (Pro), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(App),1,0,0
+GRPOPT 2,(BSP),0,0,0
+GRPOPT 3,(Module),0,0,0
+GRPOPT 4,(CMSIS/Driver),0,0,0
+GRPOPT 5,(CMSIS/Core),0,0,0
+GRPOPT 6,(UCOS/Port),0,0,0
+GRPOPT 7,(UCOS/Source),0,0,0
+GRPOPT 8,(LWIP),0,0,0
+
+OPTFFF 1,1,1,503316480,0,11,20,0,<..\App\Main.c><Main.c> 
+OPTFFF 1,2,1,268435456,0,41,48,0,<..\App\Task_Test.c><Task_Test.c> 
+OPTFFF 1,3,5,419430400,0,2,8,0,<..\App\Task_Test.h><Task_Test.h> 
+OPTFFF 1,4,5,0,0,1,1,0,<..\App\App_Inc.h><App_Inc.h> 
+OPTFFF 2,5,1,1207959552,0,0,0,0,<..\BSP\LED.C><LED.C> 
+OPTFFF 2,6,1,184549376,0,8,14,0,<..\BSP\Bsp_Global.c><Bsp_Global.c> 
+OPTFFF 2,7,1,503316480,0,3,11,0,<..\BSP\DMA.C><DMA.C> 
+OPTFFF 2,8,1,704643072,0,10,22,0,<..\BSP\NVIC.C><NVIC.C> 
+OPTFFF 2,9,1,671088640,0,95,103,0,<..\BSP\SCI.c><SCI.c> 
+OPTFFF 3,10,5,0,0,0,0,0,<..\Module\M_CMSIS_P.h><M_CMSIS_P.h> 
+OPTFFF 3,11,1,150994944,0,0,0,0,<..\Module\M_Delay_P.c><M_Delay_P.c> 
+OPTFFF 3,12,5,0,0,0,0,0,<..\Module\M_Delay_P.h><M_Delay_P.h> 
+OPTFFF 3,13,1,0,0,0,0,0,<..\Module\M_Global.c><M_Global.c> 
+OPTFFF 3,14,5,0,0,0,0,0,<..\Module\M_Global.h><M_Global.h> 
+OPTFFF 3,15,5,0,0,0,0,0,<..\Module\M_Type_P.h><M_Type_P.h> 
+OPTFFF 4,16,1,0,0,0,0,0,<..\CMSIS\Driver\misc.c><misc.c> 
+OPTFFF 4,17,5,0,0,0,0,0,<..\CMSIS\Driver\misc.h><misc.h> 
+OPTFFF 4,18,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_adc.c><stm32f4xx_adc.c> 
+OPTFFF 4,19,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_adc.h><stm32f4xx_adc.h> 
+OPTFFF 4,20,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_can.c><stm32f4xx_can.c> 
+OPTFFF 4,21,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_can.h><stm32f4xx_can.h> 
+OPTFFF 4,22,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_crc.c><stm32f4xx_crc.c> 
+OPTFFF 4,23,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_crc.h><stm32f4xx_crc.h> 
+OPTFFF 4,24,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_cryp.c><stm32f4xx_cryp.c> 
+OPTFFF 4,25,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_cryp.h><stm32f4xx_cryp.h> 
+OPTFFF 4,26,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_cryp_aes.c><stm32f4xx_cryp_aes.c> 
+OPTFFF 4,27,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_cryp_des.c><stm32f4xx_cryp_des.c> 
+OPTFFF 4,28,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_cryp_tdes.c><stm32f4xx_cryp_tdes.c> 
+OPTFFF 4,29,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dac.c><stm32f4xx_dac.c> 
+OPTFFF 4,30,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dac.h><stm32f4xx_dac.h> 
+OPTFFF 4,31,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dbgmcu.c><stm32f4xx_dbgmcu.c> 
+OPTFFF 4,32,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dbgmcu.h><stm32f4xx_dbgmcu.h> 
+OPTFFF 4,33,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dcmi.c><stm32f4xx_dcmi.c> 
+OPTFFF 4,34,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dcmi.h><stm32f4xx_dcmi.h> 
+OPTFFF 4,35,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dma.c><stm32f4xx_dma.c> 
+OPTFFF 4,36,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_dma.h><stm32f4xx_dma.h> 
+OPTFFF 4,37,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_exti.c><stm32f4xx_exti.c> 
+OPTFFF 4,38,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_exti.h><stm32f4xx_exti.h> 
+OPTFFF 4,39,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_flash.c><stm32f4xx_flash.c> 
+OPTFFF 4,40,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_flash.h><stm32f4xx_flash.h> 
+OPTFFF 4,41,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_fsmc.c><stm32f4xx_fsmc.c> 
+OPTFFF 4,42,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_fsmc.h><stm32f4xx_fsmc.h> 
+OPTFFF 4,43,1,335544320,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_gpio.c><stm32f4xx_gpio.c> 
+OPTFFF 4,44,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_gpio.h><stm32f4xx_gpio.h> 
+OPTFFF 4,45,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_hash.c><stm32f4xx_hash.c> 
+OPTFFF 4,46,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_hash.h><stm32f4xx_hash.h> 
+OPTFFF 4,47,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_hash_md5.c><stm32f4xx_hash_md5.c> 
+OPTFFF 4,48,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_hash_sha1.c><stm32f4xx_hash_sha1.c> 
+OPTFFF 4,49,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_i2c.c><stm32f4xx_i2c.c> 
+OPTFFF 4,50,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_i2c.h><stm32f4xx_i2c.h> 
+OPTFFF 4,51,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_iwdg.c><stm32f4xx_iwdg.c> 
+OPTFFF 4,52,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_iwdg.h><stm32f4xx_iwdg.h> 
+OPTFFF 4,53,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_pwr.c><stm32f4xx_pwr.c> 
+OPTFFF 4,54,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_pwr.h><stm32f4xx_pwr.h> 
+OPTFFF 4,55,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rcc.c><stm32f4xx_rcc.c> 
+OPTFFF 4,56,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rcc.h><stm32f4xx_rcc.h> 
+OPTFFF 4,57,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rng.c><stm32f4xx_rng.c> 
+OPTFFF 4,58,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rng.h><stm32f4xx_rng.h> 
+OPTFFF 4,59,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rtc.c><stm32f4xx_rtc.c> 
+OPTFFF 4,60,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_rtc.h><stm32f4xx_rtc.h> 
+OPTFFF 4,61,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_sdio.c><stm32f4xx_sdio.c> 
+OPTFFF 4,62,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_sdio.h><stm32f4xx_sdio.h> 
+OPTFFF 4,63,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_spi.c><stm32f4xx_spi.c> 
+OPTFFF 4,64,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_spi.h><stm32f4xx_spi.h> 
+OPTFFF 4,65,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_syscfg.c><stm32f4xx_syscfg.c> 
+OPTFFF 4,66,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_syscfg.h><stm32f4xx_syscfg.h> 
+OPTFFF 4,67,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_tim.c><stm32f4xx_tim.c> 
+OPTFFF 4,68,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_tim.h><stm32f4xx_tim.h> 
+OPTFFF 4,69,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_usart.c><stm32f4xx_usart.c> 
+OPTFFF 4,70,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_usart.h><stm32f4xx_usart.h> 
+OPTFFF 4,71,1,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_wwdg.c><stm32f4xx_wwdg.c> 
+OPTFFF 4,72,5,0,0,0,0,0,<..\CMSIS\Driver\stm32f4xx_wwdg.h><stm32f4xx_wwdg.h> 
+OPTFFF 5,73,5,0,0,0,0,0,<..\CMSIS\Core\arm_math.h><arm_math.h> 
+OPTFFF 5,74,5,0,0,0,0,0,<..\CMSIS\Core\core_cm4.h><core_cm4.h> 
+OPTFFF 5,75,5,0,0,0,0,0,<..\CMSIS\Core\core_cmFunc.h><core_cmFunc.h> 
+OPTFFF 5,76,5,0,0,0,0,0,<..\CMSIS\Core\core_cmInstr.h><core_cmInstr.h> 
+OPTFFF 5,77,2,0,0,171,175,0,<..\CMSIS\Core\startup_stm32f4xx.s><startup_stm32f4xx.s> 
+OPTFFF 5,78,5,0,0,0,0,0,<..\CMSIS\Core\stm32f4xx.h><stm32f4xx.h> 
+OPTFFF 5,79,1,0,0,0,0,0,<..\CMSIS\Core\system_stm32f4xx.c><system_stm32f4xx.c> 
+OPTFFF 5,80,5,0,0,0,0,0,<..\CMSIS\Core\system_stm32f4xx.h><system_stm32f4xx.h> 
+OPTFFF 5,81,5,0,0,0,0,0,<..\CMSIS\Core\stm32f4xx_conf.h><stm32f4xx_conf.h> 
+OPTFFF 5,82,4,0,0,0,0,0,<..\CMSIS\Core\arm_cortexM4lf_math.lib><arm_cortexM4lf_math.lib> 
+OPTFFF 6,83,5,0,0,0,0,0,<..\UCOS\Port\app_cfg.h><app_cfg.h> 
+OPTFFF 6,84,5,0,0,0,0,0,<..\UCOS\Port\os_cfg.h><os_cfg.h> 
+OPTFFF 6,85,5,0,0,0,0,0,<..\UCOS\Port\os_cpu.h><os_cpu.h> 
+OPTFFF 6,86,2,0,0,0,0,0,<..\UCOS\Port\os_cpu_a.asm><os_cpu_a.asm> 
+OPTFFF 6,87,1,0,0,0,0,0,<..\UCOS\Port\os_cpu_c.c><os_cpu_c.c> 
+OPTFFF 6,88,1,0,0,0,0,0,<..\UCOS\Port\os_dbg.c><os_dbg.c> 
+OPTFFF 6,89,5,0,0,0,0,0,<..\UCOS\Port\ucosii_inc.h><ucosii_inc.h> 
+OPTFFF 7,90,1,234881024,0,1779,1789,0,<..\UCOS\Source\os_core.c><os_core.c> 
+OPTFFF 7,91,1,0,0,0,0,0,<..\UCOS\Source\os_flag.c><os_flag.c> 
+OPTFFF 7,92,1,0,0,0,0,0,<..\UCOS\Source\os_mbox.c><os_mbox.c> 
+OPTFFF 7,93,1,0,0,0,0,0,<..\UCOS\Source\os_mem.c><os_mem.c> 
+OPTFFF 7,94,1,0,0,0,0,0,<..\UCOS\Source\os_mutex.c><os_mutex.c> 
+OPTFFF 7,95,1,0,0,0,0,0,<..\UCOS\Source\os_q.c><os_q.c> 
+OPTFFF 7,96,1,0,0,92,94,0,<..\UCOS\Source\os_sem.c><os_sem.c> 
+OPTFFF 7,97,1,0,0,0,0,0,<..\UCOS\Source\os_task.c><os_task.c> 
+OPTFFF 7,98,1,0,0,0,0,0,<..\UCOS\Source\os_time.c><os_time.c> 
+OPTFFF 7,99,1,0,0,0,0,0,<..\UCOS\Source\os_tmr.c><os_tmr.c> 
+OPTFFF 7,100,5,0,0,393,405,0,<..\UCOS\Source\ucos_ii.h><ucos_ii.h> 
+
+ExtF <F:\开发板\STM32F407开发板（基本型）V1.0\设计文档\LWIP移植（ucos版）\BSP\DMA.h> 1,10,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ExtF <F:\开发板\STM32F407开发板（基本型）V1.0\设计文档\LWIP移植（ucos版）\BSP\SCI.h> 4,18,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ExtF <F:\开发板\STM32F407开发板（基本型）V1.0\设计文档\LWIP移植（ucos版）\BSP\main.h> 15,23,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+
+TARGOPT 1, (Pro)
+ ADSCLK=25000000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 1,0,1
+  OPTAX 255
+  OPTBL 0,(Datasheet)<DATASHTS\ST\STM32F4xx\DM00037051.pdf>
+  OPTBL 1,(Reference Manual)<DATASHTS\ST\STM32F4xx\DM00031020.pdf>
+  OPTBL 2,(Technical Reference Manual)<datashts\arm\cortex_m4\r0p1\DDI0439C_CORTEX_M4_R0P1_TRM.PDF>
+  OPTBL 3,(Generic User Guide)<datashts\arm\cortex_m4\r0p1\DUI0553A_CORTEX_M4_DGUG.PDF>
+  OPTDL (SARMCM3.DLL)(-MPU -REMAP)(DCM.DLL)(-pCM4)(SARMCM3.DLL)(-MPU)(TCM.DLL)(-pCM4)
+  OPTDBG 48126,7,()()()()()()()()()() (Segger\JL2CM3.dll)()()()
+  OPTKEY 0,(JL2CM3)(-U270676280 -O14 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -N00("ARM CoreSight JTAG-DP") -D00(4BA00477) -L00(4) -N01("Unknown JTAG device") -D01(06413041) -L01(5) -TO4114 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32F2xx_1024 -FS08000000 -FL0100000)
+  OPTKEY 0,(DLGDARM)((1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0))
+  OPTKEY 0,(DLGTARM)((1010=565,96,931,642,0)(1007=105,136,282,400,0)(1008=90,120,456,345,0)(1009=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)(-T0)
+  OPTKEY 0,(DLGUARM)((106=-1,-1,-1,-1,0)(107=-1,-1,-1,-1,0))
+  OPTKEY 0,(UL2CM3)(-UV0VVV123 -O207 -S0 -C0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC168000000 -TP21 -TDS808F -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32F4xx_1024 -FS08000000 -FL0100000)
+  OPTBB 0,0,55,1,134218454,0,0,0,0,1,<App\Task_Test.c>()(\\Pro\Task_Test\55)
+  OPTDF 0x86
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

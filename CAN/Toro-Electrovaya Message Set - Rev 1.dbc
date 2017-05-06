@@ -1,0 +1,94 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Battery_Slave Battery_Master ECU
+
+
+BO_ 2149101992 ECU_Status1: 8 ECU
+ SG_ MessageID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Keep_Alive_Request : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2148335490 BMS_Status2: 8 Battery_Master
+ SG_ Pack_Max_Chg_Current : 0|32@1+ (0.1,0) [0|0] "Amps" Vector__XXX
+ SG_ Pack_Max_DChg_Current : 32|32@1+ (0.1,0) [0|0] "Amps" Vector__XXX
+
+BO_ 2148335489 BMS_Status1: 8 Battery_Master
+ SG_ Pack_Voltage : 32|32@1+ (0.001,0) [0|0] "Volts" Vector__XXX
+ SG_ Pack_Current : 0|32@1- (0.001,0) [0|0] "Amps" Vector__XXX
+
+BO_ 2148335491 BMS_Status3: 8 Battery_Master
+ SG_ Pack_SOC : 0|16@1+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ Pack_SOH : 16|16@1+ (0.1,0) [0|0] "%" Vector__XXX
+
+BO_ 2149102079 BMS_SW_Version: 8 Battery_Master
+ SG_ SubID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VersionNumber : 8|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2148073456 AddressClaim: 8 Vector__XXX
+ SG_ ToroName : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2148073460 AddressResponse: 8 Vector__XXX
+ SG_ ToroName : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2148335492 BMS_WH_Counter: 8 Battery_Master
+ SG_ Lifetime_WH_Counter : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ "BAUDRATE=250000
+";
+CM_ BO_ 2149101992 "100ms";
+CM_ SG_ 2149101992 MessageID "0x01h Always";
+CM_ BO_ 2148335490 "100ms";
+CM_ SG_ 2148335490 Pack_Max_Chg_Current "Max regen current the pack will accept";
+CM_ SG_ 2148335490 Pack_Max_DChg_Current "Max discharge current allowed";
+CM_ BO_ 2148335489 "100ms";
+CM_ SG_ 2148335489 Pack_Current "Actual current.  Positive is charge or regen current into the pack, Negative is discharge current.";
+CM_ BO_ 2148335491 "100ms";
+CM_ BO_ 2149102079 "On boot and upon request";
+CM_ SG_ 2149102079 SubID "Always 0x46h";
+CM_ SG_ 2149102079 VersionNumber "To be defined by Electrovaya";
+CM_ BO_ 2148073456 "Per the address claim standard";
+CM_ SG_ 2148073456 ToroName "Constant will be provided by Toro";
+CM_ BO_ 2148073460 "Per the address claim standard";
+CM_ SG_ 2148073460 ToroName "Constant will be provided";
+CM_ BO_ 2148335492 "On boot and upon request";
+CM_ SG_ 2148335492 Lifetime_WH_Counter "Electrovaya to define data format";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 2149101992 Keep_Alive_Request 0 "Battery can open contactor" 1 "Machine operating normally, keep contactor closed" 2 "Master controller is shutting down, keep contactor closed" ;
+SIG_VALTYPE_ 2149102079 VersionNumber : 1;
+

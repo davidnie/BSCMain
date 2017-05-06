@@ -1,0 +1,319 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ VtCabDebugFunction 9 "reset" 8 "errorClr" 7 "forceBalance" 6 "CAN2_Set" 5 "CAN1_Set" 4 "SN_Set" 3 "SOHModify" 2 "SOCModify" 1 "ModIdModify" 0 "Description for the value '0x0'" ;
+VAL_TABLE_ DigStat 1 "ON" 0 "OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ AD_T2_Copy_2 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADCal_T3 : 0|16@1- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ ADCal_T2 : 0|16@1- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ ADCal_VInput_Copy_3 : 0|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ ADCal_T1 : 0|16@1- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ ADCal_VInput : 0|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ DO_HS3_Copy_3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS3_Copy_2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ simMd : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ pumpFanCtrl : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ negRlCtrl : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabFanRlCtrl : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ crtlByCAN : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAB4CapacityTotal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAB3CapacityTotal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAB2CapacityTotal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAB1CapacityTotal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnUnderVolt : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnModReplReq : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnUnderTemp : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnStrOffline : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnSStrOffline : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnOverVolt : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnOverTemp : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnOverCurr : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnLowSOC : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnLogFillFull : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnfanReplReq : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnCntrModRepReq : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnChgReq : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnBalReq : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ warnBalProg : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmCntrFault : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmUnderVolt : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmUnderTemp : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmSmoke : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmOverVolt : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmOverTemp : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmOverCurr : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmHVAC : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmFire : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmExcessOffStr : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ alarmStatus : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ tripStatus : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ bmsWorkMode : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ brackerCtrlSign : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ bracker_open_sig : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ bracker_close_sig : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ hbvolt : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1046 AD_CalaValue_3: 2 Vector__XXX
+ SG_ ADCal_Curr : 0|16@1+ (0.001,0) [0|0] "A" Vector__XXX
+
+BO_ 1045 AD_CalaValue_2: 8 Vector__XXX
+ SG_ AD_T3 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_T2 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_T1 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_V_IN : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1044 AD_CalaValue_1: 8 Vector__XXX
+ SG_ ADCal_VBatt : 0|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ ADCal_V5 : 48|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ ADCal_V12 : 32|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ ADCal_VBus : 16|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+
+BO_ 1043 AD_TrueValue_3: 2 Vector__XXX
+ SG_ AD_V12 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1042 AD_TrueValue_2: 8 Vector__XXX
+ SG_ AD_V5 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_V_IN : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_VBus : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_CURR : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1041 AD_TrueValue_1: 8 Vector__XXX
+ SG_ AD_VBatt : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_T3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_T2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AD_T1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 307 DIO_Stat: 8 Vector__XXX
+ SG_ DI_WakeupScr_12V : 46|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_Drysig_2 : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_Drysig_1 : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_60V_2 : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_60V_1 : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_12V_2 : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DI_12V_1 : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LS3 : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LS2 : 30|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LS1 : 29|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED4 : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED2 : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED1 : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_3 : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_2 : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_1 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS5 : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS4 : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS3 : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS2 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS1 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_BMS_Wakeup : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_12V_Ctrl : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugFunId : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabid : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 306 DIO_Ctrl: 8 Vector__XXX
+ SG_ DO_LS3 : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LS2 : 30|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LS1 : 29|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED4 : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED2 : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_LED1 : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_3 : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_2 : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_ISO_1 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS5 : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS4 : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS3 : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS2 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_HS1 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_BMS_Wakeup : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DO_12V_Ctrl : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugFunId : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabid : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 293 CCMPower: 8 Vector__XXX
+ SG_ sysPower : 0|16@1- (0.001,0) [0|0] "KW" Vector__XXX
+ SG_ sysKWHrs_D : 16|16@1- (0.1,0) [0|0] "kwhr" Vector__XXX
+ SG_ sysKWHrs_C : 32|16@1- (0.1,0) [0|0] "kwhr" Vector__XXX
+
+BO_ 305 CABDebug_2: 8 Vector__XXX
+ SG_ cabDebugPara_4 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugPara_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugPara_2 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugPara_1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabDebugFunId : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabid : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1040 SC_Debug: 4 Vector__XXX
+ SG_ inIDLE : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMUWkCmd : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ wakeup_source : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SC_BMU_PWR_SET : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SC_Power_set : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SC_Fault : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ f_loseBMU : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ f_loseVcu : 9|1@1+ (1,0) [0|0] "sec" Vector__XXX
+ SG_ SCState : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 304 CABDebug_1: 8 Vector__XXX
+ SG_ simCurr_str_4 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ simCurr_str_3 : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ simCurr_str_2 : 40|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ simCurr_str_1 : 32|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_4 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_3 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_2 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strPosRlCtrl_1 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ pumpFanCtrl : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ negRlCtrl : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabFanRlCtrl : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_4 : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_3 : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_2 : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ balRlCtrl_1 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_4 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_3 : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_2 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strFanRlCtrl_1 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ crtlByCAN : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabid : 0|5@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ 3221225472 DO_HS3_Copy_3 1 "ON" 0 "OFF" ;
+VAL_ 3221225472 DO_HS3_Copy_2 1 "ON" 0 "OFF" ;
+VAL_ 3221225472 strPosRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strPosRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strPosRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strPosRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 pumpFanCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 negRlCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 cabFanRlCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 balRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 balRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 balRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 balRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strFanRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strFanRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strFanRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 3221225472 strFanRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+VAL_ 307 DI_WakeupScr_12V 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_Drysig_2 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_Drysig_1 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_60V_2 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_60V_1 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_12V_2 1 "ON" 0 "OFF" ;
+VAL_ 307 DI_12V_1 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LS3 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LS2 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LS1 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LED4 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LED2 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_LED1 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_ISO_3 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_ISO_2 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_ISO_1 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_HS5 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_HS4 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_HS3 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_HS2 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_HS1 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_BMS_Wakeup 1 "ON" 0 "OFF" ;
+VAL_ 307 DO_12V_Ctrl 1 "ON" 0 "OFF" ;
+VAL_ 307 cabDebugFunId 8 "Description for the value '0x8'" 7 "forceBalance" 6 "CAN2_Set" 5 "CAN1_Set" 4 "reset" 3 "errorClr" 2 "SOCModify" 1 "CABIdModify" 0 "Description for the value '0x0'" ;
+VAL_ 306 DO_LS3 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_LS2 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_LS1 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_LED4 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_LED2 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_LED1 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_ISO_3 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_ISO_2 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_ISO_1 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_HS5 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_HS4 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_HS3 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_HS2 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_HS1 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_BMS_Wakeup 1 "ON" 0 "OFF" ;
+VAL_ 306 DO_12V_Ctrl 1 "ON" 0 "OFF" ;
+VAL_ 306 cabDebugFunId 8 "Description for the value '0x8'" 7 "forceBalance" 6 "CAN2_Set" 5 "CAN1_Set" 4 "reset" 3 "errorClr" 2 "SOCModify" 1 "CABIdModify" 0 "Description for the value '0x0'" ;
+VAL_ 305 cabDebugFunId 8 "Description for the value '0x8'" 7 "forceBalance" 6 "CAN2_Set" 5 "CAN1_Set" 4 "reset" 3 "errorClr" 2 "SOCModify" 1 "CABIdModify" 0 "Description for the value '0x0'" ;
+VAL_ 304 strPosRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strPosRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strPosRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strPosRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 pumpFanCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 negRlCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 cabFanRlCtrl 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 balRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 balRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 balRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 balRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strFanRlCtrl_4 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strFanRlCtrl_3 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strFanRlCtrl_2 1 "CLOSE" 0 "OPEN" ;
+VAL_ 304 strFanRlCtrl_1 1 "CLOSE" 0 "OPEN" ;
+

@@ -1,0 +1,12 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+                       
+Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\Deb
+ug\hardfaut_redir.d -o.\Debug\hardfaut_redir.o -Id:\Keil_v5\ARM\RV31\Inc -Id:\K
+eil_v5\ARM\CMSIS\Include -Id:\Keil_v5\ARM\Inc\ST\STM32F4xx --predefine="__MICRO
+LIB SETA 1" --list=.\hardfaut_redir.lst ..\BSP\hardfaut_redir.s
+331 symbols in table

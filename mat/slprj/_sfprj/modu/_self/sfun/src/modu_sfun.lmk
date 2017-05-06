@@ -1,0 +1,38 @@
+CC     = "D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -nodeclspec 
+LDFLAGS = -s -dll -L"D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"modu_sfun.obj"\
+	"c1_modu.obj"\
+	"modu_sfun_registry.obj"\
+	"lccstub.obj"\
+	"modu_sfun.def"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\sf_runtime.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmwblas.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmx.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmex.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmat.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libfixedpoint.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libut.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmwmathutil.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libemlrt.lib"\
+	"D:\Program Files\MATLAB\R2014a\extern\lib\win64\microsoft\libmwsl_log_load_blocks.lib"\
+	"D:\Program Files\MATLAB\R2014a\lib\win64\libippmwipt.lib"\
+
+INCLUDE_PATH= -I"D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\include64"  -I"D:\Program Files\MATLAB\R2014a\extern\include"  -I"D:\Program Files\MATLAB\R2014a\simulink\include"  -I"D:\Program Files\MATLAB\R2014a\stateflow\c\mex\include"  -I"D:\Program Files\MATLAB\R2014a\rtw\c\src"  -I"D:\work\project\Keil_ST\BSC_UC\mat\slprj\_sfprj\modu\_self\sfun\src" 
+ 
+
+modu_sfun.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o modu_sfun.mexw64 @modu_sfun.lmko
+modu_sfun.obj :	"modu_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "modu_sfun.c"
+c1_modu.obj :	"c1_modu.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_modu.c"
+modu_sfun_registry.obj :	"modu_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "modu_sfun_registry.c"
+lccstub.obj :	"D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "D:\Program Files\MATLAB\R2014a\sys\lcc64\lcc64\mex\lccstub.c"

@@ -1,0 +1,206 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (Pro), 0x0004 // Tools: 'ARM-ADS'
+
+Group (App)
+Group (BSP)
+Group (Module)
+Group (CMSIS/Driver)
+Group (CMSIS/Core)
+Group (UCOS/Port)
+Group (UCOS/Source)
+Group (LWIP)
+
+File 1,1,<..\App\Main.c><Main.c>
+File 1,1,<..\App\Task_Test.c><Task_Test.c>
+File 1,5,<..\App\Task_Test.h><Task_Test.h>
+File 1,5,<..\App\App_Inc.h><App_Inc.h>
+File 2,1,<..\BSP\LED.C><LED.C>
+File 2,1,<..\BSP\Bsp_Global.c><Bsp_Global.c>
+File 2,1,<..\BSP\DMA.C><DMA.C>
+File 2,1,<..\BSP\NVIC.C><NVIC.C>
+File 2,1,<..\BSP\SCI.c><SCI.c>
+File 3,5,<..\Module\M_CMSIS_P.h><M_CMSIS_P.h>
+File 3,1,<..\Module\M_Delay_P.c><M_Delay_P.c>
+File 3,5,<..\Module\M_Delay_P.h><M_Delay_P.h>
+File 3,1,<..\Module\M_Global.c><M_Global.c>
+File 3,5,<..\Module\M_Global.h><M_Global.h>
+File 3,5,<..\Module\M_Type_P.h><M_Type_P.h>
+File 4,1,<..\CMSIS\Driver\misc.c><misc.c>
+File 4,5,<..\CMSIS\Driver\misc.h><misc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_adc.c><stm32f4xx_adc.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_adc.h><stm32f4xx_adc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_can.c><stm32f4xx_can.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_can.h><stm32f4xx_can.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_crc.c><stm32f4xx_crc.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_crc.h><stm32f4xx_crc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_cryp.c><stm32f4xx_cryp.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_cryp.h><stm32f4xx_cryp.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_cryp_aes.c><stm32f4xx_cryp_aes.c>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_cryp_des.c><stm32f4xx_cryp_des.c>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_cryp_tdes.c><stm32f4xx_cryp_tdes.c>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_dac.c><stm32f4xx_dac.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_dac.h><stm32f4xx_dac.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_dbgmcu.c><stm32f4xx_dbgmcu.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_dbgmcu.h><stm32f4xx_dbgmcu.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_dcmi.c><stm32f4xx_dcmi.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_dcmi.h><stm32f4xx_dcmi.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_dma.c><stm32f4xx_dma.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_dma.h><stm32f4xx_dma.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_exti.c><stm32f4xx_exti.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_exti.h><stm32f4xx_exti.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_flash.c><stm32f4xx_flash.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_flash.h><stm32f4xx_flash.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_fsmc.c><stm32f4xx_fsmc.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_fsmc.h><stm32f4xx_fsmc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_gpio.c><stm32f4xx_gpio.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_gpio.h><stm32f4xx_gpio.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_hash.c><stm32f4xx_hash.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_hash.h><stm32f4xx_hash.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_hash_md5.c><stm32f4xx_hash_md5.c>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_hash_sha1.c><stm32f4xx_hash_sha1.c>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_i2c.c><stm32f4xx_i2c.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_i2c.h><stm32f4xx_i2c.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_iwdg.c><stm32f4xx_iwdg.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_iwdg.h><stm32f4xx_iwdg.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_pwr.c><stm32f4xx_pwr.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_pwr.h><stm32f4xx_pwr.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_rcc.c><stm32f4xx_rcc.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_rcc.h><stm32f4xx_rcc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_rng.c><stm32f4xx_rng.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_rng.h><stm32f4xx_rng.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_rtc.c><stm32f4xx_rtc.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_rtc.h><stm32f4xx_rtc.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_sdio.c><stm32f4xx_sdio.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_sdio.h><stm32f4xx_sdio.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_spi.c><stm32f4xx_spi.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_spi.h><stm32f4xx_spi.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_syscfg.c><stm32f4xx_syscfg.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_syscfg.h><stm32f4xx_syscfg.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_tim.c><stm32f4xx_tim.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_tim.h><stm32f4xx_tim.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_usart.c><stm32f4xx_usart.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_usart.h><stm32f4xx_usart.h>
+File 4,1,<..\CMSIS\Driver\stm32f4xx_wwdg.c><stm32f4xx_wwdg.c>
+File 4,5,<..\CMSIS\Driver\stm32f4xx_wwdg.h><stm32f4xx_wwdg.h>
+File 5,5,<..\CMSIS\Core\arm_math.h><arm_math.h>
+File 5,5,<..\CMSIS\Core\core_cm4.h><core_cm4.h>
+File 5,5,<..\CMSIS\Core\core_cmFunc.h><core_cmFunc.h>
+File 5,5,<..\CMSIS\Core\core_cmInstr.h><core_cmInstr.h>
+File 5,2,<..\CMSIS\Core\startup_stm32f4xx.s><startup_stm32f4xx.s>
+File 5,5,<..\CMSIS\Core\stm32f4xx.h><stm32f4xx.h>
+File 5,1,<..\CMSIS\Core\system_stm32f4xx.c><system_stm32f4xx.c>
+File 5,5,<..\CMSIS\Core\system_stm32f4xx.h><system_stm32f4xx.h>
+File 5,5,<..\CMSIS\Core\stm32f4xx_conf.h><stm32f4xx_conf.h>
+File 5,4,<..\CMSIS\Core\arm_cortexM4lf_math.lib><arm_cortexM4lf_math.lib>
+File 6,5,<..\UCOS\Port\app_cfg.h><app_cfg.h>
+File 6,5,<..\UCOS\Port\os_cfg.h><os_cfg.h>
+File 6,5,<..\UCOS\Port\os_cpu.h><os_cpu.h>
+File 6,2,<..\UCOS\Port\os_cpu_a.asm><os_cpu_a.asm>
+File 6,1,<..\UCOS\Port\os_cpu_c.c><os_cpu_c.c>
+File 6,1,<..\UCOS\Port\os_dbg.c><os_dbg.c>
+File 6,5,<..\UCOS\Port\ucosii_inc.h><ucosii_inc.h>
+File 7,1,<..\UCOS\Source\os_core.c><os_core.c>
+File 7,1,<..\UCOS\Source\os_flag.c><os_flag.c>
+File 7,1,<..\UCOS\Source\os_mbox.c><os_mbox.c>
+File 7,1,<..\UCOS\Source\os_mem.c><os_mem.c>
+File 7,1,<..\UCOS\Source\os_mutex.c><os_mutex.c>
+File 7,1,<..\UCOS\Source\os_q.c><os_q.c>
+File 7,1,<..\UCOS\Source\os_sem.c><os_sem.c>
+File 7,1,<..\UCOS\Source\os_task.c><os_task.c>
+File 7,1,<..\UCOS\Source\os_time.c><os_time.c>
+File 7,1,<..\UCOS\Source\os_tmr.c><os_tmr.c>
+File 7,5,<..\UCOS\Source\ucos_ii.h><ucos_ii.h>
+
+
+Options 1,0,0  // Target 'Pro'
+ Device (STM32F407VE)
+ Vendor (STMicroelectronics)
+ Cpu (IRAM(0x20000000-0x2001FFFF) IRAM2(0x10000000-0x1000FFFF) IROM(0x8000000-0x807FFFF) CLOCK(25000000) CPUTYPE("Cortex-M4") FPU2)
+ FlashUt ()
+ StupF ("Startup\ST\STM32F4xx\startup_stm32f4xx.s" ("STM32F4xx Startup Code"))
+ FlashDR (UL2CM3(-O207 -S0 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F4xx_1024 -FS08000000 -FL080000))
+ DevID (6106)
+ Rgf (stm32f4xx.h)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ST\STM32F4xx\)
+ OrgReg (ST\STM32F4xx\)
+ TgStat=16
+ OutDir (.\Debug\)
+ OutName (Pro)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP ("Cortex-M4")
+ RVDEV ()
+ ADSTFLGA { 0,140,16,146,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,32,0,0,2,0 }
+ OCMADSIROM { 1,0,0,0,8,0,0,8,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,8,0,0,8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,2,0,0,0,0,0,16,0,0,1,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN (USE_STDPERIPH_DRIVER,__FPU_PRESENT=1,ARM_MATH_CM4)
+ ADSCUDEF ()
+ ADSCINCD (..\App;..\BSP;..\Module;..\CMSIS\Core;..\CMSIS\Driver;..\UCOS\Source;..\UCOS\Port)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x08000000)
+ ADSLDDA (0x20000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARMCM3.DLL)(-MPU -REMAP)(DCM.DLL)(-pCM4)(SARMCM3.DLL)(-MPU)(TCM.DLL)(-pCM4)
+  OPTDBG 48126,7,()()()()()()()()()() (Segger\JL2CM3.dll)()()()
+ FLASH1 { 9,0,0,0,1,0,0,0,3,16,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (Segger\JL2CM3.dll)
+ FLASH3 ()
+ FLASH4 ()
+EndOpt
+

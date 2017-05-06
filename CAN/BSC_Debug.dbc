@@ -1,0 +1,166 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS_Node_Test
+VAL_TABLE_ vtSig_MSB_Bleeding_Gap 3 "voltage gap set to 200mv" 2 "voltage gap set to 150mv" 1 "voltage gap set to 100mv" 0 "voltage gap set to 50mv" ;
+VAL_TABLE_ vtSig_MSB_Bleeding_Bottom 10 "bottom voltage is 4.0V" 9 "bottom voltage is 3.9V" 8 "bottom voltage is 3.8V" 7 "bottom voltage is 3.7V" 6 "bottom voltage is 3.6V" 5 "bottom voltage is 3.5V" 4 "bottom voltage is 3.4V" 3 "bottom voltage is 3.3V" 2 "bottom voltage is 3.2V" 1 "bottom voltage is 3.1V" 0 "bottom voltage is 3V" ;
+VAL_TABLE_ vtSig_MSB_Bleeding_Flag 1 "allow bleeding" 0 "disable bleeding" ;
+VAL_TABLE_ vtSig_MOD_Bleed_Flag 1 "bleeding" 0 "no bleeding" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ currCycle_1 : 0|8@1+ (1,0) [0|0] "ms" Vector__XXX
+ SG_ sstr_curr_1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ currSendId : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1570 ADC_Info_3: 8 Vector__XXX
+ SG_ ADC_Curr_1 : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Curr_4 : 48|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Curr_3 : 32|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Curr_2 : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1569 ADC_Info_2: 8 Vector__XXX
+ SG_ ADC_Temp_Box_3 : 48|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Temp_Box_2 : 32|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Temp_InterBoard : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_Temp_Box_1 : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1568 ADC_Info_1: 4 Vector__XXX
+ SG_ ADC_HVIL_ret : 32|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_HVIL_out : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 306 CAB_PARA_WR_1: 8 Vector__XXX
+ SG_ bal_pwm_c_1 : 32|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ pwm_cycle : 40|16@1+ (1,0) [0|0] "us" Vector__XXX
+ SG_ bal_pwm_d_1 : 56|8@1+ (1,0) [0|0] "%" Vector__XXX
+
+BO_ 177 CABDebug_B1: 8 Vector__XXX
+ SG_ strDChgDutyCycle_1 : 0|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ strChgDutyCycle_1 : 8|8@1+ (1,0) [0|0] "%" Vector__XXX
+ SG_ strBalPower_1 : 16|16@1+ (0.1,0) [0|0] "W" Vector__XXX
+ SG_ currDutyCycle_1 : 24|8@1+ (0.1,0) [0|0] "%" Vector__XXX
+
+BO_ 274 CABDebug_112: 8 Vector__XXX
+ SG_ RCONRec : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ cabStatus : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strStaus_4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strStaus_3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strStaus_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ strStaus_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 276 CAB_DEBUG_4: 6 Vector__XXX
+ SG_ wakeupCnt : 40|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ bms_alarm_mode : 46|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ADB_CH4_CURR_STR4 : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ currDutyCycle_1 : 32|8@1+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ ADB_CH19_CURR_STR2 : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ADC_CH16_CURR_STR1 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+
+
+EV_ ev_var_cell3Diag_H_HARD: 0 [0|0] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell3Diag_HARD: 0 [0|0] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell2Diag_H_HARD: 0 [0|0] "" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell2Diag_HARD: 0 [0|0] "" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell1Diag_H_HARD: 0 [0|0] "" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell3Diag_H: 0 [0|0] "" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell2Diag_H: 0 [0|0] "" 0 7 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell1Diag_H: 0 [0|0] "" 0 8 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell1Diag_HARD: 0 [0|0] "" 0 9 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell3Diag: 0 [0|0] "" 0 10 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell2Diag: 0 [0|0] "" 0 11 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell1Diag: 0 [0|0] "" 0 12 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell6_voltage: 0 [0|0] "" 0 13 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell5_voltage: 0 [0|0] "" 0 14 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell4_voltage: 0 [0|0] "" 0 15 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell3_voltage: 0 [0|0] "" 0 16 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell2_voltage: 0 [0|0] "" 0 17 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ev_var_cell1_voltage: 0 [0|0] "" 0 18 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_canDTCenable: 0 [0|0] "" 0 19 DUMMY_NODE_VECTOR0  BMS_Node_Test;
+
+EV_ ev_var_SendReq: 0 [0|0] "" 0 20 DUMMY_NODE_VECTOR3  BMS_Node_Test;
+
+EV_ en_var_reqTargetAddr: 0 [0|0] "" 0 21 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_voltageModule4: 0 [0|0] "" 0 22 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_voltageModule3: 0 [0|0] "" 0 23 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_voltageModule2: 0 [0|0] "" 0 24 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_voltageModule1: 0 [0|0] "" 0 25 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_tempModule4: 0 [0|0] "" 0 26 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_tempModule3: 0 [0|0] "" 0 27 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_tempModule2: 0 [0|0] "" 0 28 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ en_var_tempModule1: 0 [0|0] "" 0 29 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+
