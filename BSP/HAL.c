@@ -134,11 +134,11 @@ void relayControl(UINT8 relayName, UINT8 status){
 			if((status==ON) && (!sysInfo.strRL[0].actionCmd)){	//now is open
 				sysInfo.strRL[0].closeTick=OSTime;
 				sysInfo.strRL[0].actionTick=OSTime;
-				HS1_ON;
+				//HS1_ON;
 			}else if((status==OFF) && sysInfo.strRL[0].actionCmd){	//now is close
 				sysInfo.strRL[0].openTick=OSTime;
 				sysInfo.strRL[0].actionTick=OSTime;
-				HS1_OFF;
+				//HS1_OFF;
 			}
  			sysInfo.strRL[0].actionCmd=status;
 			break;
@@ -146,11 +146,11 @@ void relayControl(UINT8 relayName, UINT8 status){
 			if((status==ON) && (!sysInfo.strRL[1].actionCmd)){	//now is open
 				sysInfo.strRL[1].closeTick=OSTime;
 				sysInfo.strRL[1].actionTick=OSTime;
-				HS2_ON;
+				//HS2_ON;
 			}else if((status==OFF) && sysInfo.strRL[1].actionCmd){	//now is close
 				sysInfo.strRL[1].openTick=OSTime;
 				sysInfo.strRL[1].actionTick=OSTime;
-				HS2_OFF;
+				//HS2_OFF;
 			}
  			sysInfo.strRL[1].actionCmd=status;
 			break;
@@ -158,11 +158,11 @@ void relayControl(UINT8 relayName, UINT8 status){
 			if((status==ON) && (!sysInfo.strRL[2].actionCmd)){	//now is open
 				sysInfo.strRL[2].closeTick=OSTime;
 				sysInfo.strRL[2].actionTick=OSTime;
-				HS3_ON;
+				//HS3_ON;
 			}else if((status==OFF) && sysInfo.strRL[2].actionCmd){	//now is close
 				sysInfo.strRL[2].openTick=OSTime;
 				sysInfo.strRL[2].actionTick=OSTime;
-				HS3_OFF;
+				//HS3_OFF;
 			}
  			sysInfo.strRL[2].actionCmd=status;
 			break;
@@ -170,11 +170,11 @@ void relayControl(UINT8 relayName, UINT8 status){
 			if((status==ON) && (!sysInfo.strRL[3].actionCmd)){	//now is open
 				sysInfo.strRL[3].closeTick=OSTime;
 				sysInfo.strRL[3].actionTick=OSTime;
-				HS4_ON;
+				//HS4_ON;
 			}else if((status==OFF) && sysInfo.strRL[3].actionCmd){	//now is close
 				sysInfo.strRL[3].openTick=OSTime;
 				sysInfo.strRL[3].actionTick=OSTime;
-				HS4_OFF;
+				//HS4_OFF;
 			}
  			sysInfo.strRL[3].actionCmd=status;
 			break;
@@ -261,6 +261,10 @@ UINT8 getSStrRelayStatus( UINT8 sid){
 	else if(sid==1) return getRelayStatus(RELAY_SSTR_2);
 	else if(sid==2) return getRelayStatus(RELAY_SSTR_3);
 	else if(sid==3) return getRelayStatus(RELAY_SSTR_4);
+	else if(sid==4) return getRelayStatus(RELAY_SSTR_5);
+	else if(sid==5) return getRelayStatus(RELAY_SSTR_6);
+	else if(sid==6) return getRelayStatus(RELAY_SSTR_7);
+	else if(sid==7) return getRelayStatus(RELAY_SSTR_8);
 }
 UINT8 getSStrInterlockStatus( UINT8 sid){
 
@@ -316,6 +320,18 @@ UINT8 getRelayStatus( UINT8 relayName){
 		case RELAY_SSTR_4:
 			status=sysInfo.strRL[3].actionCmd;
 			break;
+			case RELAY_SSTR_5:
+				status=sysInfo.strRL[4].actionCmd;
+				break;
+			case RELAY_SSTR_6:
+				status=sysInfo.strRL[5].actionCmd;
+				break;
+			case RELAY_SSTR_7:
+				status=sysInfo.strRL[6].actionCmd;
+				break;
+			case RELAY_SSTR_8:
+				status=sysInfo.strRL[7].actionCmd;
+				break;
 		case RELAY_BAL_1:
 			status=sysInfo.balRLInfo[0].actionCmd;
 			break;

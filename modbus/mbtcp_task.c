@@ -20,15 +20,19 @@
  */
 
 /* ----------------------- Modbus includes ----------------------------------*/
+#include "main.h"
 #include "mb.h"
 #include "mbport.h"
 #include "bmu.h"
+#include "task_main.h"
 /* ----------------------- Defines ------------------------------------------*/
 #define mainMB_TASK_PRIORITY    ( tskIDLE_PRIORITY + 3 )
 #define REG_INPUT_START         30000
 #define REG_INPUT_NREGS         4
 #define REG_HOLDING_START       40001
 #define REG_HOLDING_NREGS       150
+#define REG_HOLDING_START_2       40201 //read MODULE infromation 20byte per module
+#define REG_HOLDING_NREGS_2      200
 
 #define DISCRETE_START         10000
 #define DISCRETE_NREGS         32
@@ -121,7 +125,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
     int             iRegIndex;
 
     if( ( usAddress >= REG_HOLDING_START ) &&
-        ( usAddress + usNRegs <= REG_HOLDING_START + REG_HOLDING_NREGS ) )
+        ( (usAddress + usNRegs) <= (REG_HOLDING_START + REG_HOLDING_NREGS )) )
     {
         iRegIndex = ( int )( usAddress - usRegHoldingStart );
         switch ( eMode )
@@ -138,7 +142,7 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             break;
 
             /* Update current register values with new values from the
-             * protocol stack. */
+           		  * protocol stack. */
         case MB_REG_WRITE:
             while( usNRegs > 0 )
             {
@@ -149,7 +153,30 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegi
             }
         }
     }
-    else
+	
+    else if( ( usAddress >= REG_HOLDING_START_2 ) &&
+        ( usAddress + usNRegs <= REG_HOLDING_START_2 + REG_HOLDING_NREGS_2 ) ) //read module infomration 20reg per mod
+    {
+    	UINT16 modbuf[160];
+		int mid;
+		for(mid=0;mid<8;mid++){
+			memcpy(&modbuf[mid*20],&bmu[mid].cv[0],28);
+			modbuf[mid*20+15]=bmu[mid].ct[0]/10;
+			modbuf[mid*20+16]=bmu[mid].ct[1]/10;
+			modbuf[mid*20+17]=bmu[mid].ct[2]/10;
+		}
+        iRegIndex = ( int )( usAddress - REG_HOLDING_START_2 );
+        if(eMode==MB_REG_READ){
+            while( usNRegs > 0 )
+            {
+                *pucRegBuffer++ = ( UCHAR ) ( modbuf[iRegIndex] >> 8 );
+                *pucRegBuffer++ = ( UCHAR ) ( modbuf[iRegIndex] & 0xFF );
+                iRegIndex++;
+                usNRegs--;
+            }
+         }
+    }
+	else
     {
         eStatus = MB_ENOREG;
     }
@@ -299,17 +326,27 @@ void mbtcpd_init(void)
   xMBTCPPortInit(502);
 }
 static void mbUpdateReg(void){
-	UCHAR cid;
-	for(cid=0;cid<14;cid++){
-		usRegHoldingBuf[cid]=bmu[0].cv[cid];
-		usRegHoldingBuf[cid+14]=bmu[1].cv[cid];
+	UCHAR sid;
+	for(sid=0;sid<NUM_STR;sid++){
+		usRegHoldingBuf[sid*8]=strInfo[sid].s_cv_max;
+		usRegHoldingBuf[sid*8+1]=strInfo[sid].s_cv_min;
 	}
-	usRegHoldingBuf[28]=bmu[0].ct_1;
-	usRegHoldingBuf[29]=bmu[0].ct_2;
-	usRegHoldingBuf[30]=bmu[0].ct_3;
-	usRegHoldingBuf[31]=bmu[1].ct_1;
-	usRegHoldingBuf[32]=bmu[1].ct_2;
-	usRegHoldingBuf[33]=bmu[1].ct_3;
+	//coil read. 0x01 return contactor status. start at 10000
+	usDiscreteBuf[0]=getRelayStatus(RL_MAIN_POS);
+	usDiscreteBuf[0]|=getRelayStatus(RL_MAIN_NEG)<<1;
+	usDiscreteBuf[0]|=getRelayStatus(RL_PCHG)<<2;
+	usDiscreteBuf[0]|=getRelayStatus(RL_CHG_POS)<<3;
+	usDiscreteBuf[0]|=getRelayStatus(RL_DCDC)<<4;
+	usDiscreteBuf[0]|=getRelayStatus(RL_HEATER_1)<<5;
+	usDiscreteBuf[0]|=getRelayStatus(RL_HEATER_2)<<6;
+	usDiscreteBuf[1]=getSStrRelayStatus(0);
+	usDiscreteBuf[1]|=getSStrRelayStatus(1)<<1;
+	usDiscreteBuf[1]|=getSStrRelayStatus(2)<<2;
+	usDiscreteBuf[1]|=getSStrRelayStatus(3)<<3;
+	usDiscreteBuf[1]|=getSStrRelayStatus(4)<<4;
+	usDiscreteBuf[1]|=getSStrRelayStatus(5)<<5;
+	usDiscreteBuf[1]|=getSStrRelayStatus(6)<<6;
+	usDiscreteBuf[1]|=getSStrRelayStatus(7)<<7;
 }
 void fillMbReg(USHORT dstAddr,USHORT * ptData,UCHAR len){
 	USHORT *addr;
